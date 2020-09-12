@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase/app';
-const perf = firebase.performance();
+
 
 @Component({
   selector: 'app-root',
