@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "techssist-initial"
+    }
+  },
+  "defaultProject": "techssist-initial",
+  "cli": {
+    "analytics": false
+  }
 }
