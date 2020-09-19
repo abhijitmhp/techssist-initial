@@ -7,11 +7,19 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {AngularFirePerformanceModule} from '@angular/fire/performance';
 import { environment } from '../environments/environment';
+import { JoinAsExpertComponent } from './join-as-expert/join-as-expert.component';
+import { HomeComponent } from './home/home.component';
+import { ExpertTechGridComponent } from './expert-tech-grid/expert-tech-grid.component';
+import { ExpertTechDetailComponent } from './expert-tech-detail/expert-tech-detail.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JoinAsExpertComponent,
+    HomeComponent,
+    ExpertTechGridComponent,
+    ExpertTechDetailComponent
   ],
   imports: [
     BrowserModule,
