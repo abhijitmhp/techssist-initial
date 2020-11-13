@@ -1,10 +1,5 @@
 
   
-  .gallery {
-    padding: 40px 0 300px;
-    position: relative;
-    overflow: hidden;
-  }
 
   .card{
 
@@ -20,15 +15,15 @@
     .text-section {
         display: grid;
         /* For 3 columns */
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto;
     }
 
     .image-grid-container {
         display: grid;
 
         /* For 3 columns */
-        grid-template-columns: auto auto auto auto;
-        background-color: #132644;
+        grid-template-columns: auto auto auto;
+        background-color: rgb(242, 241, 245);
         border: none;
     }
     .image-grid-container div{
@@ -36,17 +31,19 @@
     }
 
     .image-grid-container img{
-       width:150px;height:150px;
+       width:250px;height:160px;
+       margin: 2%;
     }
 
     img {
        /* width: 100%;*/
         object-fit:cover;
+        border-radius: 5px;
     }
 
     .icon-bar {
         width: 100%;
-        background-color: #132644;
+        background-color: rgb(255, 255, 255);
         overflow: auto;
       
     }
@@ -83,5 +80,9 @@
             grid-template-columns: auto auto ;
 
         }
+
+        .image-grid-container img{
+            width:190px;height:120px;
+         }
     }
   
