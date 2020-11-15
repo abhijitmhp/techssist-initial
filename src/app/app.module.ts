@@ -11,6 +11,7 @@ import { JoinAsExpertComponent } from './join-as-expert/join-as-expert.component
 import { HomeComponent } from './home/home.component';
 import { ExpertTechGridComponent } from './expert-tech-grid/expert-tech-grid.component';
 import { ExpertTechDetailComponent } from './expert-tech-detail/expert-tech-detail.component';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ExpertTechDetailComponent } from './expert-tech-detail/expert-tech-deta
     JoinAsExpertComponent,
     HomeComponent,
     ExpertTechGridComponent,
-    ExpertTechDetailComponent
+    ExpertTechDetailComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
