@@ -51,10 +51,10 @@ export class JoinAsExpertComponent implements OnInit {
       if (form.valid) {
         this.registerExpert();
       } else {
-        alert(AppConfig.messages.invalid);
+        this.toaster.error(AppConfig.messages.invalid);
       }
     } else {
-      alert(AppConfig.messages.notDirty);
+      this.toaster.warning(AppConfig.messages.notDirty);
     }
   }
 
