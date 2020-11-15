@@ -1,0 +1,227 @@
+<nav
+  class="navbar sticky-top navbar-light"
+  style="background: #07254c; box-shadow: 0 3px 2px -2px #07254c"
+>
+  <a
+    class="navbar-brand"
+    style="color: rgb(230, 219, 219); letter-spacing: 2px"
+    href="#"
+    >TECHSSIST - Expert Enrollment</a
+  >
+</nav>
+<section
+  class="features15"
+  style="background: #3363a1; padding-top: 2%; padding-bottom: 7%"
+  id="featuresr15-u"
+>
+  <div
+    class="container"
+    style="border-left: 1px solid #c6ced6; border-right: 1px solid #c6ced6"
+  >
+    <div class="media-container-row container mt-2">
+      <div class="hash-tag-style">
+        #techssist &nbsp; &nbsp; #expert-enrollment
+      </div>
+
+      <div class="col-12 col-md-9 mb-6 col-lg-6">
+        <div
+          id="carouselExampleSlidesOnly"
+          style="text-align: center"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="quote-div cut-left-top">
+              <h6 class="quote-font">
+                Being an Expert is not just about knowing how a system is
+                supposed to work. Expertise is rather gained by investigating
+                why a system doesn't work.
+              </h6>
+              <br />
+              <h6
+                style="font-size: 15px; font-family: monospace; color: #c6ced6"
+              >
+                - Brian Redman -
+              </h6>
+            </div>
+
+            <div class="carousel-item active">
+              <img
+                src="assets/images/mbr-900x600.jpg"
+                style="
+                  border: 3px solid white;
+
+                  width: 100% !important;
+                "
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/images/mbr-900x600.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/images/mbr-900x675.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="gothic-div cut-right-top">
+            <h6 class="quote-font" style="color: rgb(78, 28, 124)">
+              Register and take the first step to joining a team of 100+
+              technology experts and use your skills to solve tech. challenges
+              and get rewarded for your expertise.
+            </h6>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-9 mb-6 col-lg-6">
+        <br />
+        <br />
+        <div class="card card-outline-secondary">
+          <div
+            class="card-body"
+            style="background: #fff; border: 4px solid white"
+          >
+            <h6
+              style="
+                color: rgb(67, 101, 114);
+                padding-bottom: 4%;
+                float: right;
+                font-weight: normal;
+                letter-spacing: 3px;
+              "
+            >
+              Register as an Expert
+            </h6>
+            <form
+              class="form"
+              role="form"
+              autocomplete="off"
+              id="loginForm"
+              #joinForm="ngForm"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  placeholder="Name"
+                  #name="ngModel"
+                  [(ngModel)]="formData.name"
+                  required
+                />
+                <div
+                  class="invalid-feedback show-block"
+                  *ngIf="submitted && !name.valid"
+                >
+                  Please enter your name
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Email ID"
+                  #email="ngModel"
+                  [(ngModel)]="formData.email"
+                  required
+                />
+                <div
+                  class="invalid-feedback show-block"
+                  *ngIf="submitted && !email.valid"
+                >
+                  Please enter your username or email
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="phone"
+                  placeholder="Phone number (Optional)"
+                  autocomplete="new-phone"
+                  [(ngModel)]="formData.phone"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="github"
+                  placeholder="Github ID (Optional)"
+                  autocomplete="new-github"
+                  [(ngModel)]="formData.github"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="country"
+                  placeholder="Country (Optional)"
+                  autocomplete="new-country"
+                  [(ngModel)]="formData.country"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="age"
+                  placeholder="Age (Optional)"
+                  autocomplete="new-age"
+                  [(ngModel)]="formData.age"
+                />
+              </div>
+
+              <re-captcha (resolved)="resolved($event)"></re-captcha>
+
+              <div class="form-group">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  name="captcha"
+                  placeholder="Captcha Value"
+                  autocomplete="new-captcha"
+                  [(ngModel)]="formData.captcha"
+                  #captcha="ngModel"
+                  required
+                />
+                <div
+                  class="invalid-feedback show-block"
+                  *ngIf="submitted && captcha.invalid"
+                >
+                  Please complete the captcha validation
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-warning float-right"
+                id="btnLogin"
+                (click)="submit(joinForm.form)"
+              >
+                Continue
+              </button>
+            </form>
+          </div>
+          <!--/card-body-->
+        </div>
+        <!-- /form card login -->
+      </div>
+    </div>
+  </div>
+</section>
