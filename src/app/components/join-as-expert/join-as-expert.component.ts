@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AppConfig } from 'src/app/config/app.config';
 import { SharedService } from 'src/app/services/shared.service';
@@ -15,19 +16,26 @@ export class JoinAsExpertComponent implements OnInit {
 
   submitted: boolean = false;
 
-  constructor(private shared: SharedService,private toaster:ToastrService) {}
+  constructor(
+    private shared: SharedService,
+    private toaster: ToastrService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.initializeForm();
     this.getData();
   }
 
-  getData(){
-    this.shared.testData().subscribe(res=>{
-      console.log('test data-->',res)
-    },err=>{
-      console.error('error fetching data',err);
-    });
+  getData() {
+    this.shared.testData().subscribe(
+      (res) => {
+        console.log('test data-->', res);
+      },
+      (err) => {
+        console.error('error fetching data', err);
+      }
+    );
   }
 
   initializeForm() {
@@ -65,6 +73,7 @@ export class JoinAsExpertComponent implements OnInit {
         console.log('success-=>', res);
         this.toaster.success(AppConfig.messages.success);
         this.initializeForm();
+        this.router.navigate(['home']);
       })
       .catch((err) => {
         console.error('error', err);
