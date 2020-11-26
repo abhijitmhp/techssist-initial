@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { AppConfig } from 'src/app/config/app.config';
-import { SharedService } from 'src/app/services/shared.service';
-import { environment } from 'src/environments/environment';
+import { AppConfig } from '../../config/app.config';
+import { SharedService } from '../../services/shared.service';
+import { environment } from '../../../environments/environment';
 import { Contact } from './contact.model';
 @Component({
   selector: 'app-join-as-expert',
